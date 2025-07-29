@@ -85,5 +85,18 @@ int valR = analogRead(flexRing);
 
 Reads analog values from the flex sensors.
 
-Sensors change resistance when bent — mapped to voltage.
+Sensors change resistance when bent — mapped to voltage.```
+
+
+🔹 Gesture Detection
+cpp
+Copy
+Edit
+bool bentI = valI > 600;
+bool bentM = valM > 600;
+bool bentR = valR > 600;
+int gesture = (bentI << 2) | (bentM << 1) | bentR;
+Converts finger bends into a binary number (e.g., 101 = 5).
+
+Enables 8 gesture combinations.
 
