@@ -100,3 +100,42 @@ Converts finger bends into a binary number (e.g., 101 = 5).
 
 Enables 8 gesture combinations.
 
+🔹 LCD Display
+cpp
+Copy
+Edit
+lcd.setCursor(0, 0);
+lcd.print(lcdMessages[gesture]);
+Displays a readable message on the LCD for the gesture.
+
+🔹 Voice Output
+cpp
+Copy
+Edit
+digitalWrite(voicePins[gesture], HIGH);
+delay(500);
+digitalWrite(voicePins[gesture], LOW);
+Triggers one of the 8 pre-recorded voice outputs using the APR33A3 module.
+
+🔹 SMS Notification
+cpp
+Copy
+Edit
+Serial1.println("AT+CMGF=1"); // Text mode
+Serial1.println("AT+CMGS=\"+91XXXXXXXXXX\"");
+Serial1.print(message);
+Serial1.write(26); // CTRL+Z to send
+Sends an SMS to the caretaker using the SIM800A GSM module.
+
+Uses Serial1 since Arduino Mega has multiple hardware serial ports.
+
+🔹 Anti-Repetition Logic
+cpp
+Copy
+Edit
+if (gesture != lastGesture) {
+   // only act if gesture has changed
+}
+Avoids sending repeated messages for the same gesture.
+
+
