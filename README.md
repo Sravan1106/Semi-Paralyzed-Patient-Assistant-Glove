@@ -73,3 +73,17 @@ A firmware developed for semi-paralyzed patients to help them communicate their 
 ---
 ---
 
+## 📄 Code Explanation
+
+Here’s a breakdown of how the code works:
+
+### 🔹 Flex Sensor Input
+```cpp
+int valI = analogRead(flexIndex);
+int valM = analogRead(flexMiddle);
+int valR = analogRead(flexRing);
+
+Reads analog values from the flex sensors.
+
+Sensors change resistance when bent — mapped to voltage.
+
