@@ -68,7 +68,7 @@ A firmware developed for semi-paralyzed patients to help them communicate their 
 ---
 ## 👩‍💻 Author
 
-**SRAVAN GINNARAPU P D**
+**SRAVAN GINNARAPU**
 
 ---
 ---
