@@ -68,7 +68,7 @@ A firmware developed for semi-paralyzed patients to help them communicate their 
 ---
 ## 👩‍💻 Author
 
-**Alona Treasa P D**
+**SRAVAN GINNARAPU P D**
 
 ---
 ---
